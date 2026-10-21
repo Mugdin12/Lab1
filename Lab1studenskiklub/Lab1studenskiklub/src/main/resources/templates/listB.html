@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Members</title>
+</head>
+<body>
+    <h1>Studenski klub</h1>
+<h2>LIsta clanova</h2>
+<table border="1">
+    <tr>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>E-mail</th>
+    </tr>
+    <tr th:each="member : ${members}">
+        <td th:text="${member.firstname}"></td>
+        <td th:text="${member.lastname}"></td>
+        <td th:text="${member.email}"></td>
+    </tr>
+</table>
+<a href="/a">Lista dogadjaja</a>
+</body>
+</html>

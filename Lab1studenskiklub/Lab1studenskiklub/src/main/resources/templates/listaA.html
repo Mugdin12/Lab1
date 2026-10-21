@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Studenski klub</h1>
+    <h2>Lista dogadjaja</h2>
+<table border="1">
+    <tr>
+        <th>Naziv</th>
+        <th>Lokacija</th>
+    </tr>
+    <tr th:each="event : ${events}">
+        <td th:text="${event.name}"></td>
+        <td th:text="${event.location}"></td>
+    </tr>
+</table>
+    <a href="/b">Lista clanova</a>
+</body>
+</html>
